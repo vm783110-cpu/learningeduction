@@ -1,263 +1,859 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="te">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Dubai</title>
 
-<!-- META PIXEL -->
+<title>TRADE WITH RADHIKA™</title>
+
+<!-- =========================
+     META PIXEL CODE
+     ========================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init','1153714410071909');
-fbq('track','PageView');
+fbq('init', '913421898474703');
+fbq('track', 'PageView');
 </script>
 
-<style>
+<noscript>
+<img
+    height="1"
+    width="1"
+    style="display:none"
+    src="https://www.facebook.com/tr?id=913421898474703&ev=PageView&noscript=1"
+/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
+<style>
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#030711;
+    --card:#08101c;
+    --card2:#0c1624;
+    --gold:#e7bd55;
+    --gold2:#ffe49a;
+    --pink:#ff4d8d;
+    --cyan:#38d9ff;
+    --text:#ffffff;
+    --muted:#9aa6b5;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial;
-background:#0b0f19;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+    min-height:100vh;
+    padding:14px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:
+        "Noto Sans Telugu",
+        "Nirmala UI",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color:var(--text);
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            #182e55 0%,
+            #091425 32%,
+            #030711 72%
+        );
+
+    overflow-x:hidden;
 }
 
-/* MAIN CARD */
+/* Premium background lights */
+body::before{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
 
-.container{
-width:380px;
-background:#111827;
-border-radius:25px;
-overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    top:-120px;
+    left:-100px;
+
+    border-radius:50%;
+
+    background:#ff3c82;
+
+    opacity:.07;
+
+    filter:blur(70px);
+
+    pointer-events:none;
 }
 
-/* HEADER */
+body::after{
+    content:"";
+    position:fixed;
+    width:280px;
+    height:280px;
 
-.header{
-background:linear-gradient(135deg,#6a5cff,#ff3cac);
-padding:30px;
-text-align:center;
+    right:-110px;
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:#2acfff;
+
+    opacity:.07;
+
+    filter:blur(70px);
+
+    pointer-events:none;
 }
 
-.profile{
-width:110px;
-height:110px;
-border-radius:20px;
-object-fit:cover;
-animation:float 3s ease-in-out infinite;
+/* Main container */
+.card{
+    width:100%;
+    max-width:465px;
+
+    position:relative;
+    overflow:hidden;
+
+    padding:28px 21px 22px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            155deg,
+            rgba(13,26,43,.98),
+            rgba(4,9,17,.99)
+        );
+
+    border:1px solid rgba(231,189,85,.48);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.75),
+        0 0 45px rgba(231,189,85,.08);
 }
 
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-8px);}
-100%{transform:translateY(0px);}
+/* Top golden line */
+.card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:8%;
+    right:8%;
+
+    height:2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            #fff0b5,
+            var(--gold),
+            transparent
+        );
 }
 
-.name{
-font-size:28px;
-font-weight:bold;
-margin-top:15px;
+/* Decorative corners */
+.corner{
+    position:absolute;
+
+    width:42px;
+    height:42px;
+
+    border-color:rgba(231,189,85,.42);
+
+    z-index:2;
 }
 
-/* BADGES */
+.c1{
+    top:13px;
+    left:13px;
 
+    border-top:1px solid;
+    border-left:1px solid;
+}
+
+.c2{
+    top:13px;
+    right:13px;
+
+    border-top:1px solid;
+    border-right:1px solid;
+}
+
+.c3{
+    bottom:13px;
+    left:13px;
+
+    border-bottom:1px solid;
+    border-left:1px solid;
+}
+
+.c4{
+    bottom:13px;
+    right:13px;
+
+    border-bottom:1px solid;
+    border-right:1px solid;
+}
+
+/* Logo */
+.logo-wrap{
+    width:124px;
+    height:124px;
+
+    margin:3px auto 17px;
+
+    padding:4px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0ad,
+            var(--gold),
+            #9a6d17
+        );
+
+    box-shadow:
+        0 0 0 5px rgba(231,189,85,.06),
+        0 0 35px rgba(231,189,85,.18);
+}
+
+.logo{
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    background:#101a29;
+}
+
+/* Brand */
+.top-label{
+    color:var(--gold2);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:7px;
+}
+
+h1{
+    font-family:
+        Georgia,
+        "Noto Sans Telugu",
+        serif;
+
+    font-size:27px;
+
+    line-height:1.3;
+
+    letter-spacing:1px;
+
+    color:#fff;
+
+    margin-bottom:5px;
+
+    text-shadow:
+        0 2px 20px rgba(231,189,85,.12);
+}
+
+.subtitle{
+    color:#aeb8c5;
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:19px;
+}
+
+/* Divider */
+.divider{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:0 8px 19px;
+
+    color:var(--gold2);
+
+    font-size:13px;
+}
+
+.divider span{
+    height:1px;
+
+    flex:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(231,189,85,.55)
+        );
+}
+
+.divider span:last-child{
+    background:
+        linear-gradient(
+            90deg,
+            rgba(231,189,85,.55),
+            transparent
+        );
+}
+
+/* Premium badges */
 .badges{
-margin-top:12px;
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:7px;
+
+    margin-bottom:19px;
 }
 
 .badge{
-display:inline-block;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin:5px;
+    padding:7px 11px;
+
+    border-radius:30px;
+
+    color:#d8dee8;
+
+    font-size:9.5px;
+
+    font-weight:800;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.015)
+        );
+
+    border:1px solid rgba(255,255,255,.09);
 }
 
-.premium{
-background:#8b5cf6;
+.badge.vip{
+    color:#07101b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe99f,
+            #d8ac3d
+        );
+
+    border:none;
+
+    box-shadow:
+        0 0 16px rgba(231,189,85,.13);
 }
 
-.live{
-background:#22c55e;
-}
-
-/* MEMBERS */
-
-.members{
-margin-top:10px;
-font-size:15px;
-}
-
-/* STATS */
-
-.stats{
-display:flex;
-gap:12px;
-padding:20px;
-}
-
-.card{
-flex:1;
-padding:20px;
-border-radius:15px;
-text-align:center;
-font-weight:bold;
-}
-
-.win{
-background:linear-gradient(45deg,#22c55e,#16a34a);
-}
-
-.rating{
-background:linear-gradient(45deg,#f97316,#fb923c);
-}
-
-/* TELEGRAM BUTTON */
-
-.telegram{
-margin:0 20px 20px;
-display:flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:16px;
-border-radius:15px;
-background:linear-gradient(90deg,#6366f1,#a855f7);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:16px;
-}
-
-.telegram img{
-width:20px;
-}
-
-/* FEATURES */
-
+/* Feature boxes */
 .features{
-display:flex;
-justify-content:space-around;
-padding:20px;
-text-align:center;
+    text-align:left;
+
+    margin-bottom:19px;
 }
 
 .feature{
-font-size:13px;
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px;
+
+    margin-bottom:9px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.012)
+        );
+
+    border:1px solid rgba(255,255,255,.075);
+
+    transition:.2s ease;
+}
+
+.feature:hover{
+    transform:translateY(-2px);
+
+    border-color:
+        rgba(231,189,85,.28);
 }
 
 .icon{
-width:45px;
-height:45px;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin:auto;
-margin-bottom:6px;
-font-size:20px;
+    width:41px;
+    height:41px;
+
+    min-width:41px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    color:var(--gold2);
+
+    font-size:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(231,189,85,.13),
+            rgba(231,189,85,.025)
+        );
+
+    border:1px solid rgba(231,189,85,.18);
 }
 
-.v{background:#22c55e;}
-.s{background:#3b82f6;}
-.p{background:#ec4899;}
-.t{background:#f59e0b;}
+.feature strong{
+    display:block;
 
-/* FOOTER */
+    color:#f1f3f6;
 
+    font-size:13px;
+
+    line-height:1.5;
+
+    margin-bottom:2px;
+}
+
+.feature small{
+    color:#818c9a;
+
+    font-size:10px;
+
+    line-height:1.5;
+}
+
+/* Highlight */
+.highlight{
+    padding:14px 12px;
+
+    margin:2px 0 18px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(231,189,85,.08),
+            rgba(255,255,255,.018)
+        );
+
+    border:1px solid rgba(231,189,85,.15);
+}
+
+.highlight-title{
+    color:var(--gold2);
+
+    font-size:13px;
+
+    font-weight:900;
+
+    margin-bottom:4px;
+}
+
+.highlight-text{
+    color:#aeb6c1;
+
+    font-size:10.5px;
+
+    line-height:1.7;
+}
+
+/* VIP button */
+.vip-btn{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    padding:17px 20px;
+
+    border-radius:50px;
+
+    color:#080e16;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:950;
+
+    letter-spacing:.8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0a9 0%,
+            #e6bd56 45%,
+            #c99525 100%
+        );
+
+    box-shadow:
+        0 9px 30px rgba(231,189,85,.23);
+
+    animation:
+        vipGlow 1.6s infinite;
+
+    transition:.2s ease;
+}
+
+.vip-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 14px 38px rgba(231,189,85,.38);
+}
+
+.vip-icon{
+    width:28px;
+    height:28px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#1688b8;
+
+    color:white;
+
+    font-size:14px;
+}
+
+/* Blinking / glowing animation */
+@keyframes vipGlow{
+
+    0%,100%{
+        box-shadow:
+            0 7px 23px rgba(231,189,85,.18),
+            0 0 0 rgba(255,220,100,0);
+    }
+
+    50%{
+        box-shadow:
+            0 9px 32px rgba(231,189,85,.40),
+            0 0 18px rgba(255,220,100,.20);
+    }
+}
+
+/* Disclaimer */
+.note{
+    color:#7d8997;
+
+    font-size:9.5px;
+
+    line-height:1.7;
+
+    margin:13px 12px 18px;
+}
+
+/* Footer */
 .footer{
-text-align:center;
-padding:15px;
-font-size:13px;
-color:#9ca3af;
+    color:#566170;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+    margin-top:3px;
 }
 
+.footer a{
+    color:#727d8b;
+
+    text-decoration:none;
+
+    margin:0 4px;
+}
+
+.footer a:hover{
+    color:var(--gold2);
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    body{
+        padding:9px;
+    }
+
+    .card{
+        padding:27px 16px 20px;
+
+        border-radius:25px;
+    }
+
+    .logo-wrap{
+        width:112px;
+        height:112px;
+    }
+
+    h1{
+        font-size:23px;
+    }
+
+    .feature{
+        padding:11px;
+    }
+
+    .feature strong{
+        font-size:12.5px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-<div class="header">
+    <!-- Decorative corners -->
+    <div class="corner c1"></div>
+    <div class="corner c2"></div>
+    <div class="corner c3"></div>
+    <div class="corner c4"></div>
 
-<img class="profile" src="logo.png">
+    <!-- Logo -->
+    <div class="logo-wrap">
+        <img
+            src="logo.png"
+            alt="Trade With Radhika"
+            class="logo"
+        >
+    </div>
 
-<div class="name">MALIK DUBAI</div>
+    <!-- Brand -->
+    <div class="top-label">
+        WELCOME TO
+    </div>
 
-<div class="badges">
-<span class="badge premium">⭐ Premium Analyst</span>
-<span class="badge live">🔴 Live Updates</span>
-</div>
+    <h1>
+        TRADE WITH RADHIKA™
+    </h1>
 
-<div class="members">👥 100k+ Active Members</div>
+    <div class="subtitle">
+        ట్రేడింగ్ నేర్చుకోండి • మార్కెట్‌ను అర్థం చేసుకోండి
+    </div>
 
-</div>
+    <!-- Divider -->
+    <div class="divider">
+        <span></span>
+        ✦
+        <span></span>
+    </div>
 
-<div class="stats">
+    <!-- Badges -->
+    <div class="badges">
 
-<div class="card win">
-96%<br>WIN RATE
-</div>
+        <div class="badge vip">
+            ✦ VIP COMMUNITY
+        </div>
 
-<div class="card rating">
-4.1 ⭐<br>RATING
-</div>
+        <div class="badge">
+            📚 విద్యా కంటెంట్
+        </div>
 
-</div>
+        <div class="badge">
+            📊 మార్కెట్ అవగాహన
+        </div>
 
-<a class="telegram" href="https://t.me/">
+    </div>
 
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
+    <!-- Features -->
+    <div class="features">
 
-Join Telegram Channel
+        <div class="feature">
 
-</a>
+            <div class="icon">
+                📚
+            </div>
 
-<div class="features">
+            <div>
+                <strong>
+                    ట్రేడింగ్ విద్యా సెషన్స్
+                </strong>
 
-<div class="feature">
-<div class="icon v">✔</div>
-Verified
-</div>
+                <small>
+                    ట్రేడింగ్‌కు సంబంధించిన ప్రాథమిక అంశాలపై అవగాహన
+                </small>
+            </div>
 
-<div class="feature">
-<div class="icon s">🔒</div>
-Secure
-</div>
+        </div>
 
-<div class="feature">
-<div class="icon p">📈</div>
-Profitable
-</div>
+        <div class="feature">
 
-<div class="feature">
-<div class="icon t">⭐</div>
-Top Rated
-</div>
+            <div class="icon">
+                📊
+            </div>
 
-</div>
+            <div>
+                <strong>
+                    మార్కెట్ కాన్సెప్ట్స్
+                </strong>
 
-<div class="footer">
-© 2026 Malik Dubai - All rights reserved.
-</div>
+                <small>
+                    మార్కెట్ కదలికలను అర్థం చేసుకునే విద్యా చర్చలు
+                </small>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">
+                📈
+            </div>
+
+            <div>
+                <strong>
+                    చార్ట్ రీడింగ్
+                </strong>
+
+                <small>
+                    చార్ట్స్ మరియు మార్కెట్ డేటాను చదవడం గురించి నేర్చుకోండి
+                </small>
+            </div>
+
+        </div>
+
+        <div class="feature">
+
+            <div class="icon">
+                💡
+            </div>
+
+            <div>
+                <strong>
+                    ప్రాక్టికల్ కేస్ డిస్కషన్స్
+                </strong>
+
+                <small>
+                    ఉదాహరణల ద్వారా మార్కెట్ కాన్సెప్ట్స్‌పై చర్చలు
+                </small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Highlight -->
+    <div class="highlight">
+
+        <div class="highlight-title">
+            ✦ మా కమ్యూనిటీలో చేరండి
+        </div>
+
+        <div class="highlight-text">
+            ట్రేడింగ్ మరియు మార్కెట్‌కు సంబంధించిన
+            విద్యా సమాచారాన్ని తెలుసుకోవడానికి
+            మా Telegram కమ్యూనిటీలో చేరండి.
+        </div>
+
+    </div>
+
+    <!-- VIP CTA -->
+    <a
+        href="https://t.me/+1G-NUJvS4g5mZGRl"
+        class="vip-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <span class="vip-icon">
+            ➤
+        </span>
+
+        VIP TELEGRAMలో JOIN అవ్వండి
+
+    </a>
+
+    <!-- Disclaimer -->
+    <div class="note">
+        ఇది విద్యా మరియు సమాచార ప్రయోజనాల కోసం మాత్రమే.
+        ఎటువంటి లాభాల హామీ ఇవ్వబడదు. పెట్టుబడి నిర్ణయాలు
+        తీసుకునే ముందు స్వతంత్రంగా సమాచారం పరిశీలించండి.
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+        <div>
+            <a href="#">నిబంధనలు</a>
+            |
+            <a href="#">గోప్యత</a>
+            |
+            <a href="#">డిస్క్లైమర్</a>
+        </div>
+
+        <div style="margin-top:4px;">
+            Educational purposes only.
+        </div>
+
+    </div>
 
 </div>
 
