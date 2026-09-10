@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="te">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
 <title>TRADE WITH RADHIKA™</title>
 
 <!-- =========================
-     META PIXEL CODE
+     META PIXEL
      ========================= -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -38,7 +38,7 @@ fbq('track', 'PageView');
     src="https://www.facebook.com/tr?id=913421898474703&ev=PageView&noscript=1"
 />
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- End Meta Pixel -->
 
 <style>
 *{
@@ -48,15 +48,14 @@ fbq('track', 'PageView');
 }
 
 :root{
-    --bg:#030711;
-    --card:#08101c;
-    --card2:#0c1624;
-    --gold:#e7bd55;
-    --gold2:#ffe49a;
-    --pink:#ff4d8d;
-    --cyan:#38d9ff;
+    --bg:#03060c;
+    --card:#09111d;
+    --card2:#0d1827;
+    --gold:#e5b94f;
+    --gold-light:#ffe59a;
+    --blue:#28bfff;
     --text:#ffffff;
-    --muted:#9aa6b5;
+    --muted:#8f9baa;
 }
 
 html{
@@ -68,13 +67,14 @@ body{
     padding:14px;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     font-family:
-        "Noto Sans Telugu",
-        "Nirmala UI",
+        -apple-system,
+        BlinkMacSystemFont,
         "Segoe UI",
+        Roboto,
         Arial,
         sans-serif;
 
@@ -82,85 +82,90 @@ body{
 
     background:
         radial-gradient(
-            circle at 50% -10%,
-            #182e55 0%,
-            #091425 32%,
-            #030711 72%
+            circle at 50% -15%,
+            #1c3658 0%,
+            #0a1524 34%,
+            #03060c 75%
         );
 
     overflow-x:hidden;
 }
 
-/* Premium background lights */
+/* Soft premium background */
 body::before{
     content:"";
-    position:fixed;
-    width:280px;
-    height:280px;
 
-    top:-120px;
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    top:-150px;
     left:-100px;
 
     border-radius:50%;
 
-    background:#ff3c82;
+    background:#e5b94f;
 
-    opacity:.07;
+    opacity:.06;
 
-    filter:blur(70px);
+    filter:blur(80px);
 
     pointer-events:none;
 }
 
 body::after{
     content:"";
-    position:fixed;
-    width:280px;
-    height:280px;
 
-    right:-110px;
-    bottom:-100px;
+    position:fixed;
+
+    width:300px;
+    height:300px;
+
+    right:-120px;
+    bottom:-130px;
 
     border-radius:50%;
 
-    background:#2acfff;
+    background:#159eff;
 
-    opacity:.07;
+    opacity:.06;
 
-    filter:blur(70px);
+    filter:blur(80px);
 
     pointer-events:none;
 }
 
-/* Main container */
+/* Main card */
 .card{
     width:100%;
     max-width:465px;
 
     position:relative;
-    overflow:hidden;
 
-    padding:28px 21px 22px;
+    padding:30px 21px 23px;
 
     text-align:center;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    border:1px solid rgba(229,185,79,.48);
 
     background:
         linear-gradient(
             155deg,
-            rgba(13,26,43,.98),
-            rgba(4,9,17,.99)
+            rgba(14,28,46,.98),
+            rgba(3,8,15,.99)
         );
 
-    border:1px solid rgba(231,189,85,.48);
-
-    border-radius:30px;
-
     box-shadow:
-        0 25px 80px rgba(0,0,0,.75),
-        0 0 45px rgba(231,189,85,.08);
+        0 28px 80px rgba(0,0,0,.75),
+        0 0 45px rgba(229,185,79,.08);
 }
 
-/* Top golden line */
+/* Top gold line */
 .card::before{
     content:"";
 
@@ -177,7 +182,7 @@ body::after{
             90deg,
             transparent,
             var(--gold),
-            #fff0b5,
+            #fff1bd,
             var(--gold),
             transparent
         );
@@ -187,12 +192,12 @@ body::after{
 .corner{
     position:absolute;
 
-    width:42px;
-    height:42px;
+    width:43px;
+    height:43px;
 
-    border-color:rgba(231,189,85,.42);
+    border-color:rgba(229,185,79,.38);
 
-    z-index:2;
+    pointer-events:none;
 }
 
 .c1{
@@ -232,7 +237,7 @@ body::after{
     width:124px;
     height:124px;
 
-    margin:3px auto 17px;
+    margin:2px auto 18px;
 
     padding:4px;
 
@@ -241,14 +246,14 @@ body::after{
     background:
         linear-gradient(
             135deg,
-            #fff0ad,
+            #fff1b0,
             var(--gold),
-            #9a6d17
+            #9a6e18
         );
 
     box-shadow:
-        0 0 0 5px rgba(231,189,85,.06),
-        0 0 35px rgba(231,189,85,.18);
+        0 0 0 5px rgba(229,185,79,.055),
+        0 0 38px rgba(229,185,79,.18);
 }
 
 .logo{
@@ -261,15 +266,15 @@ body::after{
 
     border-radius:50%;
 
-    background:#101a29;
+    background:#101a28;
 }
 
-/* Brand */
-.top-label{
-    color:var(--gold2);
+/* Header */
+.overline{
+    color:var(--gold-light);
 
     font-size:10px;
-    font-weight:900;
+    font-weight:800;
 
     letter-spacing:3px;
 
@@ -277,23 +282,17 @@ body::after{
 }
 
 h1{
-    font-family:
-        Georgia,
-        "Noto Sans Telugu",
-        serif;
+    font-family:Georgia,serif;
 
     font-size:27px;
 
-    line-height:1.3;
+    line-height:1.25;
 
     letter-spacing:1px;
 
+    margin-bottom:7px;
+
     color:#fff;
-
-    margin-bottom:5px;
-
-    text-shadow:
-        0 2px 20px rgba(231,189,85,.12);
 }
 
 .subtitle{
@@ -301,9 +300,9 @@ h1{
 
     font-size:12px;
 
-    line-height:1.7;
+    line-height:1.6;
 
-    margin-bottom:19px;
+    margin-bottom:20px;
 }
 
 /* Divider */
@@ -314,11 +313,11 @@ h1{
 
     gap:10px;
 
-    margin:0 8px 19px;
+    margin:0 8px 20px;
 
-    color:var(--gold2);
+    color:var(--gold-light);
 
-    font-size:13px;
+    font-size:12px;
 }
 
 .divider span{
@@ -330,7 +329,7 @@ h1{
         linear-gradient(
             90deg,
             transparent,
-            rgba(231,189,85,.55)
+            rgba(229,185,79,.52)
         );
 }
 
@@ -338,24 +337,22 @@ h1{
     background:
         linear-gradient(
             90deg,
-            rgba(231,189,85,.55),
+            rgba(229,185,79,.52),
             transparent
         );
 }
 
-/* Premium badges */
+/* Badges */
 .badges{
     display:flex;
 
     justify-content:center;
 
-    align-items:center;
-
     flex-wrap:wrap;
 
     gap:7px;
 
-    margin-bottom:19px;
+    margin-bottom:20px;
 }
 
 .badge{
@@ -363,39 +360,35 @@ h1{
 
     border-radius:30px;
 
-    color:#d8dee8;
+    color:#cbd3dd;
 
     font-size:9.5px;
 
     font-weight:800;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.055),
-            rgba(255,255,255,.015)
-        );
+        rgba(255,255,255,.035);
 
-    border:1px solid rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .badge.vip{
-    color:#07101b;
+    color:#0b1118;
 
     background:
         linear-gradient(
             135deg,
-            #ffe99f,
-            #d8ac3d
+            #ffeaa2,
+            #d8ad3d
         );
 
     border:none;
 
     box-shadow:
-        0 0 16px rgba(231,189,85,.13);
+        0 0 18px rgba(229,185,79,.12);
 }
 
-/* Feature boxes */
+/* Feature list */
 .features{
     text-align:left;
 
@@ -424,14 +417,16 @@ h1{
 
     border:1px solid rgba(255,255,255,.075);
 
-    transition:.2s ease;
+    transition:
+        transform .2s ease,
+        border-color .2s ease;
 }
 
 .feature:hover{
     transform:translateY(-2px);
 
     border-color:
-        rgba(231,189,85,.28);
+        rgba(229,185,79,.28);
 }
 
 .icon{
@@ -442,46 +437,48 @@ h1{
 
     display:flex;
 
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
     border-radius:12px;
 
-    color:var(--gold2);
+    color:var(--gold-light);
 
     font-size:18px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(231,189,85,.13),
-            rgba(231,189,85,.025)
+            rgba(229,185,79,.13),
+            rgba(229,185,79,.025)
         );
 
-    border:1px solid rgba(231,189,85,.18);
+    border:1px solid rgba(229,185,79,.18);
 }
 
 .feature strong{
     display:block;
 
-    color:#f1f3f6;
+    color:#f1f4f7;
 
     font-size:13px;
 
-    line-height:1.5;
+    line-height:1.45;
 
-    margin-bottom:2px;
+    margin-bottom:3px;
 }
 
 .feature small{
-    color:#818c9a;
+    display:block;
+
+    color:#818d9c;
 
     font-size:10px;
 
     line-height:1.5;
 }
 
-/* Highlight */
+/* Community highlight */
 .highlight{
     padding:14px 12px;
 
@@ -492,33 +489,33 @@ h1{
     background:
         linear-gradient(
             135deg,
-            rgba(231,189,85,.08),
-            rgba(255,255,255,.018)
+            rgba(229,185,79,.075),
+            rgba(255,255,255,.015)
         );
 
-    border:1px solid rgba(231,189,85,.15);
+    border:1px solid rgba(229,185,79,.14);
 }
 
 .highlight-title{
-    color:var(--gold2);
+    color:var(--gold-light);
 
     font-size:13px;
 
     font-weight:900;
 
-    margin-bottom:4px;
+    margin-bottom:5px;
 }
 
 .highlight-text{
-    color:#aeb6c1;
+    color:#aab4c0;
 
     font-size:10.5px;
 
     line-height:1.7;
 }
 
-/* VIP button */
-.vip-btn{
+/* CTA */
+.telegram-btn{
     display:flex;
 
     align-items:center;
@@ -532,41 +529,65 @@ h1{
 
     border-radius:50px;
 
-    color:#080e16;
+    color:#071019;
 
     text-decoration:none;
 
     font-size:16px;
 
-    font-weight:950;
+    font-weight:900;
 
-    letter-spacing:.8px;
+    letter-spacing:.6px;
 
     background:
         linear-gradient(
             135deg,
-            #fff0a9 0%,
-            #e6bd56 45%,
-            #c99525 100%
+            #fff0ad 0%,
+            #e5bd58 45%,
+            #c79222 100%
         );
 
     box-shadow:
-        0 9px 30px rgba(231,189,85,.23);
+        0 8px 28px rgba(229,185,79,.22);
 
-    animation:
-        vipGlow 1.6s infinite;
+    animation:buttonGlow 1.8s ease-in-out infinite;
 
-    transition:.2s ease;
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
 }
 
-.vip-btn:hover{
+.telegram-btn:hover{
     transform:translateY(-3px);
 
     box-shadow:
-        0 14px 38px rgba(231,189,85,.38);
+        0 14px 38px rgba(229,185,79,.38);
 }
 
-.vip-icon{
+.telegram-btn:active{
+    transform:translateY(0);
+}
+
+/* Subtle premium blink/glow */
+@keyframes buttonGlow{
+
+    0%,100%{
+        filter:brightness(1);
+
+        box-shadow:
+            0 8px 28px rgba(229,185,79,.18);
+    }
+
+    50%{
+        filter:brightness(1.08);
+
+        box-shadow:
+            0 10px 34px rgba(229,185,79,.38),
+            0 0 18px rgba(255,220,100,.12);
+    }
+}
+
+.telegram-icon{
     width:28px;
     height:28px;
 
@@ -577,32 +598,16 @@ h1{
 
     border-radius:50%;
 
-    background:#1688b8;
+    background:#168bb8;
 
-    color:white;
+    color:#fff;
 
     font-size:14px;
 }
 
-/* Blinking / glowing animation */
-@keyframes vipGlow{
-
-    0%,100%{
-        box-shadow:
-            0 7px 23px rgba(231,189,85,.18),
-            0 0 0 rgba(255,220,100,0);
-    }
-
-    50%{
-        box-shadow:
-            0 9px 32px rgba(231,189,85,.40),
-            0 0 18px rgba(255,220,100,.20);
-    }
-}
-
 /* Disclaimer */
 .note{
-    color:#7d8997;
+    color:#7b8795;
 
     font-size:9.5px;
 
@@ -619,11 +624,11 @@ h1{
 
     line-height:1.8;
 
-    margin-top:3px;
+    margin-top:4px;
 }
 
 .footer a{
-    color:#727d8b;
+    color:#707c8a;
 
     text-decoration:none;
 
@@ -631,7 +636,7 @@ h1{
 }
 
 .footer a:hover{
-    color:var(--gold2);
+    color:var(--gold-light);
 }
 
 /* Mobile */
@@ -686,8 +691,8 @@ h1{
         >
     </div>
 
-    <!-- Brand -->
-    <div class="top-label">
+    <!-- Header -->
+    <div class="overline">
         WELCOME TO
     </div>
 
@@ -696,7 +701,7 @@ h1{
     </h1>
 
     <div class="subtitle">
-        ట్రేడింగ్ నేర్చుకోండి • మార్కెట్‌ను అర్థం చేసుకోండి
+        Learn • Understand • Improve Your Market Knowledge
     </div>
 
     <!-- Divider -->
@@ -714,11 +719,11 @@ h1{
         </div>
 
         <div class="badge">
-            📚 విద్యా కంటెంట్
+            📚 EDUCATIONAL
         </div>
 
         <div class="badge">
-            📊 మార్కెట్ అవగాహన
+            📊 MARKET AWARENESS
         </div>
 
     </div>
@@ -734,11 +739,11 @@ h1{
 
             <div>
                 <strong>
-                    ట్రేడింగ్ విద్యా సెషన్స్
+                    Trading Education
                 </strong>
 
                 <small>
-                    ట్రేడింగ్‌కు సంబంధించిన ప్రాథమిక అంశాలపై అవగాహన
+                    Learn useful trading concepts through educational sessions.
                 </small>
             </div>
 
@@ -752,11 +757,11 @@ h1{
 
             <div>
                 <strong>
-                    మార్కెట్ కాన్సెప్ట్స్
+                    Market Concepts
                 </strong>
 
                 <small>
-                    మార్కెట్ కదలికలను అర్థం చేసుకునే విద్యా చర్చలు
+                    Understand important market concepts and awareness.
                 </small>
             </div>
 
@@ -770,11 +775,11 @@ h1{
 
             <div>
                 <strong>
-                    చార్ట్ రీడింగ్
+                    Chart Reading
                 </strong>
 
                 <small>
-                    చార్ట్స్ మరియు మార్కెట్ డేటాను చదవడం గురించి నేర్చుకోండి
+                    Explore basic chart-reading and market analysis concepts.
                 </small>
             </div>
 
@@ -788,11 +793,11 @@ h1{
 
             <div>
                 <strong>
-                    ప్రాక్టికల్ కేస్ డిస్కషన్స్
+                    Practical Discussions
                 </strong>
 
                 <small>
-                    ఉదాహరణల ద్వారా మార్కెట్ కాన్సెప్ట్స్‌పై చర్చలు
+                    Discuss examples and ideas with the learning community.
                 </small>
             </div>
 
@@ -800,53 +805,54 @@ h1{
 
     </div>
 
-    <!-- Highlight -->
+    <!-- Community highlight -->
     <div class="highlight">
 
         <div class="highlight-title">
-            ✦ మా కమ్యూనిటీలో చేరండి
+            ✦ JOIN THE COMMUNITY
         </div>
 
         <div class="highlight-text">
-            ట్రేడింగ్ మరియు మార్కెట్‌కు సంబంధించిన
-            విద్యా సమాచారాన్ని తెలుసుకోవడానికి
-            మా Telegram కమ్యూనిటీలో చేరండి.
+            Get educational content, market discussions,
+            useful concepts and community updates directly
+            through our Telegram channel.
         </div>
 
     </div>
 
-    <!-- VIP CTA -->
+    <!-- Clear CTA -->
     <a
         href="https://t.me/+1G-NUJvS4g5mZGRl"
-        class="vip-btn"
+        class="telegram-btn"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Join Trade With Radhika Telegram channel"
     >
 
-        <span class="vip-icon">
+        <span class="telegram-icon">
             ➤
         </span>
 
-        VIP TELEGRAMలో JOIN అవ్వండి
+        JOIN TELEGRAM
 
     </a>
 
     <!-- Disclaimer -->
     <div class="note">
-        ఇది విద్యా మరియు సమాచార ప్రయోజనాల కోసం మాత్రమే.
-        ఎటువంటి లాభాల హామీ ఇవ్వబడదు. పెట్టుబడి నిర్ణయాలు
-        తీసుకునే ముందు స్వతంత్రంగా సమాచారం పరిశీలించండి.
+        Educational and informational content only.
+        No guaranteed profits or financial returns are promised.
+        Please make independent decisions after doing your own research.
     </div>
 
     <!-- Footer -->
     <div class="footer">
 
         <div>
-            <a href="#">నిబంధనలు</a>
+            <a href="#">Terms</a>
             |
-            <a href="#">గోప్యత</a>
+            <a href="#">Privacy</a>
             |
-            <a href="#">డిస్క్లైమర్</a>
+            <a href="#">Disclaimer</a>
         </div>
 
         <div style="margin-top:4px;">
