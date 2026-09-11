@@ -91,7 +91,6 @@ body{
     overflow-x:hidden;
 }
 
-/* Soft premium background */
 body::before{
     content:"";
 
@@ -136,7 +135,6 @@ body::after{
     pointer-events:none;
 }
 
-/* Main card */
 .card{
     width:100%;
     max-width:465px;
@@ -165,7 +163,6 @@ body::after{
         0 0 45px rgba(229,185,79,.08);
 }
 
-/* Top gold line */
 .card::before{
     content:"";
 
@@ -188,7 +185,6 @@ body::after{
         );
 }
 
-/* Decorative corners */
 .corner{
     position:absolute;
 
@@ -232,7 +228,6 @@ body::after{
     border-right:1px solid;
 }
 
-/* Logo */
 .logo-wrap{
     width:124px;
     height:124px;
@@ -269,7 +264,6 @@ body::after{
     background:#101a28;
 }
 
-/* Header */
 .overline{
     color:var(--gold-light);
 
@@ -305,7 +299,6 @@ h1{
     margin-bottom:20px;
 }
 
-/* Divider */
 .divider{
     display:flex;
 
@@ -342,7 +335,6 @@ h1{
         );
 }
 
-/* Badges */
 .badges{
     display:flex;
 
@@ -388,7 +380,6 @@ h1{
         0 0 18px rgba(229,185,79,.12);
 }
 
-/* Feature list */
 .features{
     text-align:left;
 
@@ -478,7 +469,6 @@ h1{
     line-height:1.5;
 }
 
-/* Community highlight */
 .highlight{
     padding:14px 12px;
 
@@ -514,7 +504,6 @@ h1{
     line-height:1.7;
 }
 
-/* CTA */
 .telegram-btn{
     display:flex;
 
@@ -568,7 +557,6 @@ h1{
     transform:translateY(0);
 }
 
-/* Subtle premium blink/glow */
 @keyframes buttonGlow{
 
     0%,100%{
@@ -605,7 +593,6 @@ h1{
     font-size:14px;
 }
 
-/* Disclaimer */
 .note{
     color:#7b8795;
 
@@ -616,7 +603,6 @@ h1{
     margin:13px 12px 18px;
 }
 
-/* Footer */
 .footer{
     color:#566170;
 
@@ -639,7 +625,6 @@ h1{
     color:var(--gold-light);
 }
 
-/* Mobile */
 @media(max-width:480px){
 
     body{
@@ -676,13 +661,11 @@ h1{
 
 <div class="card">
 
-    <!-- Decorative corners -->
     <div class="corner c1"></div>
     <div class="corner c2"></div>
     <div class="corner c3"></div>
     <div class="corner c4"></div>
 
-    <!-- Logo -->
     <div class="logo-wrap">
         <img
             src="logo.png"
@@ -691,7 +674,6 @@ h1{
         >
     </div>
 
-    <!-- Header -->
     <div class="overline">
         WELCOME TO
     </div>
@@ -704,14 +686,12 @@ h1{
         Learn • Understand • Improve Your Market Knowledge
     </div>
 
-    <!-- Divider -->
     <div class="divider">
         <span></span>
         ✦
         <span></span>
     </div>
 
-    <!-- Badges -->
     <div class="badges">
 
         <div class="badge vip">
@@ -728,7 +708,6 @@ h1{
 
     </div>
 
-    <!-- Features -->
     <div class="features">
 
         <div class="feature">
@@ -805,7 +784,6 @@ h1{
 
     </div>
 
-    <!-- Community highlight -->
     <div class="highlight">
 
         <div class="highlight-title">
@@ -820,13 +798,16 @@ h1{
 
     </div>
 
-    <!-- Clear CTA -->
+    <!-- =========================
+         TELEGRAM CTA
+         ========================= -->
     <a
         href="https://t.me/+1G-NUJvS4g5mZGRl"
         class="telegram-btn"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Join Trade With Radhika Telegram channel"
+        onclick="trackTelegramClick(event, this.href)"
     >
 
         <span class="telegram-icon">
@@ -837,14 +818,12 @@ h1{
 
     </a>
 
-    <!-- Disclaimer -->
     <div class="note">
         Educational and informational content only.
         No guaranteed profits or financial returns are promised.
         Please make independent decisions after doing your own research.
     </div>
 
-    <!-- Footer -->
     <div class="footer">
 
         <div>
@@ -862,6 +841,45 @@ h1{
     </div>
 
 </div>
+
+<!-- =========================
+     TELEGRAM META TRACKING
+     ========================= -->
+<script>
+function trackTelegramClick(event, url) {
+
+    event.preventDefault();
+
+    if (typeof fbq === 'function') {
+
+        var eventId =
+            'telegram_' +
+            Date.now() +
+            '_' +
+            Math.random().toString(36).substring(2, 10);
+
+        fbq(
+            'track',
+            'Lead',
+            {
+                content_name: 'Telegram Join',
+                content_category: 'Telegram Community'
+            },
+            {
+                eventID: eventId
+            }
+        );
+
+        setTimeout(function(){
+            window.open(url, '_blank');
+        }, 400);
+
+    } else {
+
+        window.open(url, '_blank');
+    }
+}
+</script>
 
 </body>
 </html>
