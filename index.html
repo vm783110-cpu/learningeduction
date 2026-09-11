@@ -3,883 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telugu Trader Radhika</title>
 
-<title>TRADE WITH RADHIKA™</title>
-
-<!-- =========================
-     META PIXEL
-     ========================= -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;
-n.loaded=!0;
-n.version='2.0';
-n.queue=[];
-t=b.createElement(e);
-t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document, 'script',
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init', '913421898474703');
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img
-    height="1"
-    width="1"
-    style="display:none"
-    src="https://www.facebook.com/tr?id=913421898474703&ev=PageView&noscript=1"
-/>
-</noscript>
-<!-- End Meta Pixel -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=913421898474703&ev=PageView&noscript=1"
+/></noscript>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* CSS Reset and Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-:root{
-    --bg:#03060c;
-    --card:#09111d;
-    --card2:#0d1827;
-    --gold:#e5b94f;
-    --gold-light:#ffe59a;
-    --blue:#28bfff;
-    --text:#ffffff;
-    --muted:#8f9baa;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-html{
-    scroll-behavior:smooth;
+/* Main Container with Glowing Border */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #0d1117;
+    border: 2px solid #00c6ff;
+    border-radius: 30px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
 }
 
-body{
-    min-height:100vh;
-    padding:14px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-    color:var(--text);
-
-    background:
-        radial-gradient(
-            circle at 50% -15%,
-            #1c3658 0%,
-            #0a1524 34%,
-            #03060c 75%
-        );
-
-    overflow-x:hidden;
+/* Rounded Profile Image */
+.logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00c6ff;
+    margin-bottom: 25px;
 }
 
-body::before{
-    content:"";
-
-    position:fixed;
-
-    width:300px;
-    height:300px;
-
-    top:-150px;
-    left:-100px;
-
-    border-radius:50%;
-
-    background:#e5b94f;
-
-    opacity:.06;
-
-    filter:blur(80px);
-
-    pointer-events:none;
+/* Section Titles */
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
-body::after{
-    content:"";
-
-    position:fixed;
-
-    width:300px;
-    height:300px;
-
-    right:-120px;
-    bottom:-130px;
-
-    border-radius:50%;
-
-    background:#159eff;
-
-    opacity:.06;
-
-    filter:blur(80px);
-
-    pointer-events:none;
+/* Feature List Styles */
+.features-list {
+    text-align: left;
+    margin-bottom: 35px;
+    list-style: none;
+    padding: 0 10px;
 }
 
-.card{
-    width:100%;
-    max-width:465px;
-
-    position:relative;
-
-    padding:30px 21px 23px;
-
-    text-align:center;
-
-    overflow:hidden;
-
-    border-radius:30px;
-
-    border:1px solid rgba(229,185,79,.48);
-
-    background:
-        linear-gradient(
-            155deg,
-            rgba(14,28,46,.98),
-            rgba(3,8,15,.99)
-        );
-
-    box-shadow:
-        0 28px 80px rgba(0,0,0,.75),
-        0 0 45px rgba(229,185,79,.08);
+.features-list li {
+    font-size: 16px;
+    color: #a1a1a1;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
 }
 
-.card::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:8%;
-    right:8%;
-
-    height:2px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold),
-            #fff1bd,
-            var(--gold),
-            transparent
-        );
+/* Specific Icons */
+.features-list li::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.corner{
-    position:absolute;
+.features-list li.icon-globe::before { content: '🌐'; font-size: 20px; }
+.features-list li.icon-chart::before { content: '📊'; font-size: 20px; }
+.features-list li.icon-diamond::before { content: '💎'; font-size: 20px; }
+.features-list li.icon-book::before { content: '📖'; font-size: 20px; }
 
-    width:43px;
-    height:43px;
-
-    border-color:rgba(229,185,79,.38);
-
-    pointer-events:none;
+/* Main Gradient Button */
+.telegram-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #2af5ef 0%, #009efd 30%, #b721ff 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(183, 33, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.c1{
-    top:13px;
-    left:13px;
-
-    border-top:1px solid;
-    border-left:1px solid;
+.telegram-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(183, 33, 255, 0.5);
 }
 
-.c2{
-    top:13px;
-    right:13px;
-
-    border-top:1px solid;
-    border-right:1px solid;
+/* Motivational Text */
+.hindi-quote {
+    font-size: 15px;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    padding: 0 15px;
 }
 
-.c3{
-    bottom:13px;
-    left:13px;
-
-    border-bottom:1px solid;
-    border-left:1px solid;
+/* Footer */
+.footer {
+    font-size: 11px;
+    color: #586069;
+    line-height: 1.8;
 }
 
-.c4{
-    bottom:13px;
-    right:13px;
-
-    border-bottom:1px solid;
-    border-right:1px solid;
+.footer-links a {
+    color: #586069;
+    text-decoration: none;
 }
 
-.logo-wrap{
-    width:124px;
-    height:124px;
-
-    margin:2px auto 18px;
-
-    padding:4px;
-
-    border-radius:50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff1b0,
-            var(--gold),
-            #9a6e18
-        );
-
-    box-shadow:
-        0 0 0 5px rgba(229,185,79,.055),
-        0 0 38px rgba(229,185,79,.18);
-}
-
-.logo{
-    width:100%;
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    border-radius:50%;
-
-    background:#101a28;
-}
-
-.overline{
-    color:var(--gold-light);
-
-    font-size:10px;
-    font-weight:800;
-
-    letter-spacing:3px;
-
-    margin-bottom:7px;
-}
-
-h1{
-    font-family:Georgia,serif;
-
-    font-size:27px;
-
-    line-height:1.25;
-
-    letter-spacing:1px;
-
-    margin-bottom:7px;
-
-    color:#fff;
-}
-
-.subtitle{
-    color:#aeb8c5;
-
-    font-size:12px;
-
-    line-height:1.6;
-
-    margin-bottom:20px;
-}
-
-.divider{
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    margin:0 8px 20px;
-
-    color:var(--gold-light);
-
-    font-size:12px;
-}
-
-.divider span{
-    height:1px;
-
-    flex:1;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(229,185,79,.52)
-        );
-}
-
-.divider span:last-child{
-    background:
-        linear-gradient(
-            90deg,
-            rgba(229,185,79,.52),
-            transparent
-        );
-}
-
-.badges{
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:7px;
-
-    margin-bottom:20px;
-}
-
-.badge{
-    padding:7px 11px;
-
-    border-radius:30px;
-
-    color:#cbd3dd;
-
-    font-size:9.5px;
-
-    font-weight:800;
-
-    background:
-        rgba(255,255,255,.035);
-
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.badge.vip{
-    color:#0b1118;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffeaa2,
-            #d8ad3d
-        );
-
-    border:none;
-
-    box-shadow:
-        0 0 18px rgba(229,185,79,.12);
-}
-
-.features{
-    text-align:left;
-
-    margin-bottom:19px;
-}
-
-.feature{
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:12px;
-
-    margin-bottom:9px;
-
-    border-radius:15px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.045),
-            rgba(255,255,255,.012)
-        );
-
-    border:1px solid rgba(255,255,255,.075);
-
-    transition:
-        transform .2s ease,
-        border-color .2s ease;
-}
-
-.feature:hover{
-    transform:translateY(-2px);
-
-    border-color:
-        rgba(229,185,79,.28);
-}
-
-.icon{
-    width:41px;
-    height:41px;
-
-    min-width:41px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:12px;
-
-    color:var(--gold-light);
-
-    font-size:18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(229,185,79,.13),
-            rgba(229,185,79,.025)
-        );
-
-    border:1px solid rgba(229,185,79,.18);
-}
-
-.feature strong{
-    display:block;
-
-    color:#f1f4f7;
-
-    font-size:13px;
-
-    line-height:1.45;
-
-    margin-bottom:3px;
-}
-
-.feature small{
-    display:block;
-
-    color:#818d9c;
-
-    font-size:10px;
-
-    line-height:1.5;
-}
-
-.highlight{
-    padding:14px 12px;
-
-    margin:2px 0 18px;
-
-    border-radius:16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(229,185,79,.075),
-            rgba(255,255,255,.015)
-        );
-
-    border:1px solid rgba(229,185,79,.14);
-}
-
-.highlight-title{
-    color:var(--gold-light);
-
-    font-size:13px;
-
-    font-weight:900;
-
-    margin-bottom:5px;
-}
-
-.highlight-text{
-    color:#aab4c0;
-
-    font-size:10.5px;
-
-    line-height:1.7;
-}
-
-.telegram-btn{
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    gap:10px;
-
-    width:100%;
-
-    padding:17px 20px;
-
-    border-radius:50px;
-
-    color:#071019;
-
-    text-decoration:none;
-
-    font-size:16px;
-
-    font-weight:900;
-
-    letter-spacing:.6px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #fff0ad 0%,
-            #e5bd58 45%,
-            #c79222 100%
-        );
-
-    box-shadow:
-        0 8px 28px rgba(229,185,79,.22);
-
-    animation:buttonGlow 1.8s ease-in-out infinite;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-.telegram-btn:hover{
-    transform:translateY(-3px);
-
-    box-shadow:
-        0 14px 38px rgba(229,185,79,.38);
-}
-
-.telegram-btn:active{
-    transform:translateY(0);
-}
-
-@keyframes buttonGlow{
-
-    0%,100%{
-        filter:brightness(1);
-
-        box-shadow:
-            0 8px 28px rgba(229,185,79,.18);
-    }
-
-    50%{
-        filter:brightness(1.08);
-
-        box-shadow:
-            0 10px 34px rgba(229,185,79,.38),
-            0 0 18px rgba(255,220,100,.12);
-    }
-}
-
-.telegram-icon{
-    width:28px;
-    height:28px;
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    border-radius:50%;
-
-    background:#168bb8;
-
-    color:#fff;
-
-    font-size:14px;
-}
-
-.note{
-    color:#7b8795;
-
-    font-size:9.5px;
-
-    line-height:1.7;
-
-    margin:13px 12px 18px;
-}
-
-.footer{
-    color:#566170;
-
-    font-size:9px;
-
-    line-height:1.8;
-
-    margin-top:4px;
-}
-
-.footer a{
-    color:#707c8a;
-
-    text-decoration:none;
-
-    margin:0 4px;
-}
-
-.footer a:hover{
-    color:var(--gold-light);
-}
-
-@media(max-width:480px){
-
-    body{
-        padding:9px;
-    }
-
-    .card{
-        padding:27px 16px 20px;
-
-        border-radius:25px;
-    }
-
-    .logo-wrap{
-        width:112px;
-        height:112px;
-    }
-
-    h1{
-        font-size:23px;
-    }
-
-    .feature{
-        padding:11px;
-    }
-
-    .feature strong{
-        font-size:12.5px;
-    }
+.footer-links a:hover {
+    color: #8b949e;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <div class="corner c1"></div>
-    <div class="corner c2"></div>
-    <div class="corner c3"></div>
-    <div class="corner c4"></div>
+    <img src="logo.png" alt="Telugu Trader Radhika" class="logo">
 
-    <div class="logo-wrap">
-        <img
-            src="logo.png"
-            alt="Trade With Radhika"
-            class="logo"
-        >
-    </div>
+    <h1>Telugu Trader Radhika</h1>
 
-    <div class="overline">
-        WELCOME TO
-    </div>
+    <ul class="features-list">
+        <li class="icon-globe">Learning & Educational Sessions</li>
+        <li class="icon-chart">Market Concepts & Awareness</li>
+        <li class="icon-diamond">Chart Reading Concepts</li>
+        <li class="icon-book">Educational Case Discussions</li>
+    </ul>
 
-    <h1>
-        TRADE WITH RADHIKA™
-    </h1>
+    <p style="font-size: 14px; color: #a1a1a1; margin-bottom: 15px;">
+        Join our learning community and grow your knowledge
+    </p>
 
-    <div class="subtitle">
-        Learn • Understand • Improve Your Market Knowledge
-    </div>
-
-    <div class="divider">
-        <span></span>
-        ✦
-        <span></span>
-    </div>
-
-    <div class="badges">
-
-        <div class="badge vip">
-            ✦ VIP COMMUNITY
-        </div>
-
-        <div class="badge">
-            📚 EDUCATIONAL
-        </div>
-
-        <div class="badge">
-            📊 MARKET AWARENESS
-        </div>
-
-    </div>
-
-    <div class="features">
-
-        <div class="feature">
-
-            <div class="icon">
-                📚
-            </div>
-
-            <div>
-                <strong>
-                    Trading Education
-                </strong>
-
-                <small>
-                    Learn useful trading concepts through educational sessions.
-                </small>
-            </div>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="icon">
-                📊
-            </div>
-
-            <div>
-                <strong>
-                    Market Concepts
-                </strong>
-
-                <small>
-                    Understand important market concepts and awareness.
-                </small>
-            </div>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="icon">
-                📈
-            </div>
-
-            <div>
-                <strong>
-                    Chart Reading
-                </strong>
-
-                <small>
-                    Explore basic chart-reading and market analysis concepts.
-                </small>
-            </div>
-
-        </div>
-
-        <div class="feature">
-
-            <div class="icon">
-                💡
-            </div>
-
-            <div>
-                <strong>
-                    Practical Discussions
-                </strong>
-
-                <small>
-                    Discuss examples and ideas with the learning community.
-                </small>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="highlight">
-
-        <div class="highlight-title">
-            ✦ JOIN THE COMMUNITY
-        </div>
-
-        <div class="highlight-text">
-            Get educational content, market discussions,
-            useful concepts and community updates directly
-            through our Telegram channel.
-        </div>
-
-    </div>
-
-    <!-- =========================
-         TELEGRAM CTA
-         ========================= -->
-    <a
-        href="https://t.me/+1G-NUJvS4g5mZGRl"
-        class="telegram-btn"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Join Trade With Radhika Telegram channel"
-        onclick="trackTelegramClick(event, this.href)"
-    >
-
-        <span class="telegram-icon">
-            ➤
-        </span>
-
-        JOIN TELEGRAM
-
+    <a href="https://t.me/+1G-NUJvS4g5mZGRl" class="telegram-btn">
+        Join Telegram
     </a>
 
-    <div class="note">
-        Educational and informational content only.
-        No guaranteed profits or financial returns are promised.
-        Please make independent decisions after doing your own research.
-    </div>
+    <p class="hindi-quote">
+        With the right mindset and honest hard work, success is always possible.
+    </p>
 
     <div class="footer">
-
-        <div>
-            <a href="#">Terms</a>
-            |
-            <a href="#">Privacy</a>
-            |
-            <a href="#">Disclaimer</a>
+        <div class="footer-links">
+            <a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">Disclaimer</a>
         </div>
-
-        <div style="margin-top:4px;">
-            Educational purposes only.
+        <div style="margin-top: 5px;">
+            This site is not part of Facebook™ or endorsed by Facebook™.
         </div>
-
     </div>
 
 </div>
-
-<!-- =========================
-     TELEGRAM META TRACKING
-     ========================= -->
-<script>
-function trackTelegramClick(event, url) {
-
-    event.preventDefault();
-
-    if (typeof fbq === 'function') {
-
-        var eventId =
-            'telegram_' +
-            Date.now() +
-            '_' +
-            Math.random().toString(36).substring(2, 10);
-
-        fbq(
-            'track',
-            'Lead',
-            {
-                content_name: 'Telegram Join',
-                content_category: 'Telegram Community'
-            },
-            {
-                eventID: eventId
-            }
-        );
-
-        setTimeout(function(){
-            window.open(url, '_blank');
-        }, 400);
-
-    } else {
-
-        window.open(url, '_blank');
-    }
-}
-</script>
 
 </body>
 </html>
